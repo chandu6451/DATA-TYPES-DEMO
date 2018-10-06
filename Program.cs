@@ -4,27 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImplicitlyTypedLocalVariable
+namespace DataTypesDemo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //var val;    //Error : Implicitly Typed Local Variables must be initialized
+            Console.WriteLine("Size of Integer : " + sizeof(int));
+            Console.WriteLine("Size of float : " + sizeof(float));
+            Console.WriteLine("Size of Char : " + sizeof(char));
+            Console.WriteLine("Size of Double : " + sizeof(double));
+            Console.WriteLine("Size of Boolean : " + sizeof(Boolean));
+            Console.WriteLine("Size of Byte : " + sizeof(byte));
 
-            //var str = null; //Error : Cannot assign null to an Implicitly Typed Local Variable
+            Console.WriteLine("Max Limit of Int : " + int.MaxValue);
+            Console.WriteLine("Min Limit of Int : " + int.MinValue);
 
-            var str = "Capgemini";
-            str = null;
+            Console.WriteLine("Type of int : " + typeof(int));
 
-            //var arr = { 1, 2, 3, 4, 5 }; //Error : Cannot initialize an Implicitly Type Local Variables with an Array Initializers
+            //int num = 123;
+            //Console.WriteLine("Type of 123 : " + num.GetType());
 
-            var arr = new int[] { 1, 2, 3, 4, 5 };
-
-            var num = 10.5;
-            //num = false;
-
-            float f = 34.76f;
+            int num = 123;
+            object obj = num;
+            int another = (int)obj;
 
             Console.ReadKey();
         }
